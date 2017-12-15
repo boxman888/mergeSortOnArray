@@ -1,0 +1,73 @@
+lirbarys: stdio, stdlib
+
+MAIN:
+	make an array called list[] of type int
+	print/fill list[]
+	
+	make an int called beg
+	make an int called end
+	mergeSort(list[], beg, end)
+	print list[]
+
+FUNCTION mergeSort(list[], beg,end):void
+	test if beg is less than end else fail
+
+	make beg be the start of list[0]
+	make end be the end of the list:(sizeof(list[])
+	int:mid = (beg+end)/2
+	
+	:Left side of list[]	
+	mergeSort(list[], beg, mid)
+	Right side of list[]
+	:mergeSort(list[], mid + 1, r)
+	As there is only 1 element in both the left anr right sub array,
+        so sort them and merge them back.
+	merge(list[], beg, mid, end)
+
+UTILITY FUNCTION merge(list[], beg, mid, end):void
+	
+	get size of the left side of list[], call it n1
+	get size of the right sid of list[], call it n2
+	n1 = mid - beg + 1 (adding one due to zero)
+	n2 = end - mid
+	
+	make left array, called L, to hold addresses left of mid in list
+	for (int i = 0; i < n1;++i)
+		L[n1] = list[i]
+	make right array, calle R, to hold addresses right of min in list
+	for (int i = 0; i < n2;++i)
+		R[n2] = list[i]
+
+	make some counter tokans
+	int i = 0
+	int j = 0
+	int z = the current index, so = beg
+	walk through both left and right arrays and see which element is smaller
+	while ( i < n1 && j < n2)
+	{	
+		if (L[i] <= R[j]
+		{
+			list[z] = L[i]
+			i++
+		}
+		else R must be greater
+		{
+			list[z] = R[j]
+			j++
+		}
+		z++
+	}
+	copy the last bit of data in L[] into list[]
+	while (i < n1)
+	{
+		list[z] = L[i]
+		i++
+		z++;
+	}
+	copy the last it of data in R[] into list[]
+	while (j < n2)
+	{
+		list[z] = R[j]
+		j++
+		z++
+	}
