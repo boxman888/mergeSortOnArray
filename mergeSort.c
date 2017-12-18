@@ -20,7 +20,7 @@ int main()
 	
 	return 0;
 }
-// mergeSort haves the list reursivly and then merges
+// mergeSort halfs the list reursivly and then merges
 void mergeSort(int list[], int beg, int end)
 {
 	// If beg is greater than end, ERROR
