@@ -23,7 +23,6 @@ int main()
 // mergeSort halfs the list reursivly and then merges
 void mergeSort(int list[], int beg, int end)
 {
-	// If beg is greater than end, ERROR
 	if (beg < end)
 	{
 		int mid = (beg+end)/2;
